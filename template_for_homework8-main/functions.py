@@ -20,24 +20,6 @@ def find_data() -> None:
     print(result)
 
 
-# def edit_data() -> None:
-#     """Изменяет результат поиска по справочнику."""
-#     with open('book.txt', 'r', encoding='utf-8') as file:
-#         data = file.read()
-#     contact_to_find = input('Введите, что хотите изменить: ')
-#     result = search(data, contact_to_find)
-#     for line in contact_to_find:
-#                 if contact_to_find in line:
-#                     print(line)
-#                     add_f = (input('Введите фамилию: ' ).title())
-#                     add_i = (input('Введите Имя: ' ).title())
-#                     add_o = (input('Введите Отчество: ' ).title())
-#                     add_tel = (input('Введите телефон: ' ).title())
-#                     new_line = add_f +' '+add_i +' '+ add_o +' '+ add_tel + '\n'
-#                     line = line.replace(line, new_line)
-#                 file.writelines(line)
-#     print(result)
-
 def edit_data() -> None:
     with open('book.txt', 'r', encoding='utf-8') as file:
         data = file.read()
@@ -57,7 +39,6 @@ def edit_data() -> None:
     print(f"Запись - {edit_tel_book_lines}, изменена на - {edited_line}\n")
     with open('book.txt', "w", encoding='utf-8') as f:
         f.write("\n".join(tel_book_lines))
-        
         
 
 def delete_data() -> None:
